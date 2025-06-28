@@ -1,0 +1,25 @@
+{
+  "name": "chromadb-server",
+  "version": "1.0.0",
+  "description": "Standalone ChromaDB server for hosting on cloud platforms",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "restart": "docker-compose restart",
+    "logs": "docker-compose logs -f",
+    "status": "docker-compose ps",
+    "backup": "tar -czf chroma_backup_$(date +%Y%m%d).tar.gz chroma_data/",
+    "test": "curl http://localhost:8000/api/v1/heartbeat"
+  },
+  "keywords": [
+    "chromadb",
+    "vector-database",
+    "ai",
+    "embeddings"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+} 
